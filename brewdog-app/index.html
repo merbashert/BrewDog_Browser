@@ -8,5 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header></header>
+    <div class = "search">
+        <div id = "search-box">
+            <div class = "parameter" id = "nameSearch">
+                <button id = "name">Search By Name</button>
+                <input type = "text" placeholder="Name" id = "name"/>
+            </div>
+            <div class = "parameter" id = "abvSearch">
+                <button id = "ABV">Search By ABV</button>
+                <span class = "minmax">
+                    <input type = "number" placeholder="Min" class = "min" id = "minABV"/>
+                    <input type = "number" placeholder="Max" class = "max" id = "maxABV"/>
+                </span>
+            </div>
+            <div class = "parameter" id = "ibuSearch">
+                <button id = "IBU">Search By IBU</button>
+                <span class = "minmax">
+                    <input type = "number" placeholder="Min" class = "min" id = "minIBU"/>
+                    <input type = "number" placeholder="Max" class = "max" id = "maxIBU"/>
+                </span>
+            </div>
+            <div class = "parameter" id = "foodSearch">
+                <button id = "name">Search By Food Pairing</button>
+                <input type = "text" placeholder="Food" id = "food"/>
+            </div>
+        </div>
+        <div id = "search-result">
+        </div>
+    </div>
 </body>
 </html>
