@@ -18,11 +18,10 @@ $(() => {
                     const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
                     const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
+            },
+            () => {
+                alert("What's the name?");
             }
-            // ,
-            // () => {
-            //     alert("What's the name?");
-            // }
         );
     }); //end of name button
 
@@ -52,6 +51,33 @@ $(() => {
             // }
         );
     }); //end of abv button
+
+    $('#ibuButton').on('click', (event) => {
+        event.preventDefault();
+
+        const minIBU = $('#minIBU').val();
+        const maxIBU = $('#maxIBU').val();
+
+        const ibuAPI = $.ajax({
+            url: 'https://api.punkapi.com/v2/beers?ibu_gt=' + minIBU + '&ibu_lt=' + maxIBU
+        }).then(
+            (data) => {
+                for (let i = 0; i < 5; i++) {
+                    const $beerInfo = $('<div>').addClass("beer-info")
+                    $('#search-result').append($beerInfo)
+                    const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
+                    const $desc = $('<div>').appendTo($beerInfo).addClass('description').text(data[i].description)
+                    const $abv = $('<div>').appendTo($beerInfo).addClass('abv').text("ABV: " + data[i].abv)
+                    const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
+                    const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
+                }
+            }
+            // ,
+            // () => {
+            //     alert("What's the name?");
+            // }
+        );
+    }); //end of ipu button
 
     $('#foodButton').on('click', (event) => {
         event.preventDefault();
