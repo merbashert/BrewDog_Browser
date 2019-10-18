@@ -1,0 +1,39 @@
+/* * {
+    border: 1px solid gold;
+} */
+
+.search {
+    width: 40%;
+}
+
+#search-box {
+    border: 1px solid black;
+}
+
+#id {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parameter {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.parameter button {
+    margin-right: 20px;
+}
+
+.minmax {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.min, .max {
+    width: 15%;
+}
+
+#search-result {
+    border: 1px solid black;
+}
