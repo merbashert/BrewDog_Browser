@@ -1,31 +1,54 @@
 $(() => {
 
 
-let strongChildren = $('.strong-images').children();
-let currentImg = 0;
-let highestIndex = strongChildren.length - 1
+    let strongChildren = $('.strong-images').children();
+    let strongText = $('.strong-fact');
+    let currentImg = 0;
+    let currentText = 0;
+    let highestIndex = strongChildren.length - 1
+    let highestText = strongText.length - 1
 
-$('.next').on('click', () => {
-    strongChildren.eq(currentImg).css("display", "none")
-    if (currentImg < highestIndex) {
-        currentImg++
-    } else {
-        currentImg = 0
-    }
+    $('.next').on('click', () => {
+        strongChildren.eq(currentImg).css("display", "none")
+        if (currentImg < highestIndex) {
+            currentImg++
+        } else {
+            currentImg = 0
+        }
 
-    strongChildren.eq(currentImg).css("display", "block")
-});
+        strongText.eq(currentText).css("display", "none")
+        if (currentText < highestText) {
+            currentText++
+        } else {
+            currentText = 0
+        }
 
-$('.previous').on("click", () => {
-    strongChildren.eq(currentImg).css('display', 'none')
+        strongChildren.eq(currentImg).css("display", "block")
+        strongText.eq(currentText).css("display", "block")
+    });
 
-    if (currentImg > 0) {
-        currentImg --
-    } else {
-        currentImg = highestIndex
-    }
-    strongChildren.eq(currentImg).css('display', 'block')
-});
+    $('.previous').on("click", () => {
+        strongChildren.eq(currentImg).css('display', 'none')
+
+        if (currentImg > 0) {
+            currentImg --
+        } else {
+            currentImg = highestIndex
+        }
+
+        strongText.eq(currentText).css('display', 'none')
+
+        if (currentText > 0) {
+            currentText --
+        } else {
+            currentText = highestText
+        }
+
+        strongChildren.eq(currentImg).css('display', 'block')
+        strongText.eq(currentText).css('display', 'block')
+    });
+
+
 
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
@@ -139,15 +162,20 @@ $('.previous').on("click", () => {
             url: "https://api.punkapi.com/v2/beers/random"
         }).then(
             (data) => {
-                    const randomBeerName = $('<div>').text("Name: " + data[0].name)
-                    const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
-                    const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
-                    const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
-                    $('.random').append(randomBeerName)
-                    $('.random').append(randomBeerDescription)
-                    $('.random').append(randomBeerABV)
-                    $('.random').append(randomBeerIBU)
-                })
+                const randomBeerName = $('<div>').text("Name: " + data[0].name)
+                const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
+                const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
+                const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
+                $('.random').append(randomBeerName)
+                $('.random').append(randomBeerDescription)
+                $('.random').append(randomBeerABV)
+                $('.random').append(randomBeerIBU)
             })
+        }) //end of random button
 
-}) //end of onload
+    $('#reset').on('click', (event) => {
+        $('#search-result').empty().css("display", "none");
+
+    })
+
+    }) //end of onload
