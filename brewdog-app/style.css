@@ -19,7 +19,7 @@ section1 {
 
 .search {
     height: 20%;
-    margin: 2em auto;
+    margin: 3em auto;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ section1 {
 }
 
 .min, .max {
-    width: 18%;
+    width: 18.5%;
     margin-left: .45em
 }
 
@@ -75,6 +75,15 @@ section1 {
 
 .beer-info {
     border-bottom: 1px solid black;
+    margin: 5px;
+}
+
+.more-info {
+    display: none;
+}
+
+h2 {
+    margin-left: 25px;
 }
 
 @media (min-width: 700px) {
@@ -126,8 +135,9 @@ h1 {
     .random {
         text-align: justify;
     }
+
     .random-box {
-        width: 200px;
+        width: 300px;
         height: 400px;
         background-size: auto;
     }

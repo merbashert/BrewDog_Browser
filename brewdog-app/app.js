@@ -52,10 +52,11 @@ $(() => {
 
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
+
         $('#search-result').css("display", "block")
 
         const beerName = $('#name').val();
-
+        
         const beerAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?beer_name=' + beerName
         }).then(
@@ -64,10 +65,16 @@ $(() => {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
                     const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
-                    const $desc = $('<div>').appendTo($beerInfo).addClass('description').text(data[i].description)
-                    const $abv = $('<div>').appendTo($beerInfo).addClass('abv').text("ABV: " + data[i].abv)
-                    const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
-                    const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
+
+                    const $beerMoreInfo = $('<div>').appendTo($beerInfo).addClass("more-info")
+
+                    $name.on("click", () => {
+                        $beerMoreInfo.toggle();
+                    })
+                    const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
+                    const $abv = $('<div>').appendTo($beerMoreInfo).addClass('abv').text("ABV: " + data[i].abv)
+                    const $ibu = $('<div>').appendTo($beerMoreInfo).addClass('ibu').text("IBU: " + data[i].ibu)
+                    const $food = $('<div>').appendTo($beerMoreInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
             },
             () => {
@@ -78,6 +85,7 @@ $(() => {
 
     $('#abvButton').on('click', (event) => {
         event.preventDefault();
+
         $('#search-result').css("display", "block")
 
         const minABV = $('#minABV').val();
@@ -91,10 +99,17 @@ $(() => {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
                     const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
-                    const $desc = $('<div>').appendTo($beerInfo).addClass('description').text(data[i].description)
-                    const $abv = $('<div>').appendTo($beerInfo).addClass('abv').text("ABV: " + data[i].abv)
-                    const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
-                    const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
+
+                    const $beerMoreInfo = $('<div>').appendTo($beerInfo).addClass("more-info")
+
+                    $name.on("click", () => {
+                        $beerMoreInfo.toggle();
+                    })
+
+                    const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
+                    const $abv = $('<div>').appendTo($beerMoreInfo).addClass('abv').text("ABV: " + data[i].abv)
+                    const $ibu = $('<div>').appendTo($beerMoreInfo).addClass('ibu').text("IBU: " + data[i].ibu)
+                    const $food = $('<div>').appendTo($beerMoreInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
             },
             () => {
@@ -118,10 +133,17 @@ $(() => {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
                     const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
-                    const $desc = $('<div>').appendTo($beerInfo).addClass('description').text(data[i].description)
-                    const $abv = $('<div>').appendTo($beerInfo).addClass('abv').text("ABV: " + data[i].abv)
-                    const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
-                    const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
+
+                    const $beerMoreInfo = $('<div>').appendTo($beerInfo).addClass("more-info")
+
+                    $name.on("click", () => {
+                        $beerMoreInfo.toggle();
+                    })
+
+                    const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
+                    const $abv = $('<div>').appendTo($beerMoreInfo).addClass('abv').text("ABV: " + data[i].abv)
+                    const $ibu = $('<div>').appendTo($beerMoreInfo).addClass('ibu').text("IBU: " + data[i].ibu)
+                    const $food = $('<div>').appendTo($beerMoreInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
             },
             () => {
@@ -144,10 +166,17 @@ $(() => {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
                     const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
-                    const $desc = $('<div>').appendTo($beerInfo).addClass('description').text(data[i].description)
-                    const $abv = $('<div>').appendTo($beerInfo).addClass('abv').text("ABV: " + data[i].abv)
-                    const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
-                    const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
+
+                    const $beerMoreInfo = $('<div>').appendTo($beerInfo).addClass("more-info")
+
+                    $name.on("click", () => {
+                        $beerMoreInfo.toggle();
+                    })
+
+                    const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
+                    const $abv = $('<div>').appendTo($beerMoreInfo).addClass('abv').text("ABV: " + data[i].abv)
+                    const $ibu = $('<div>').appendTo($beerMoreInfo).addClass('ibu').text("IBU: " + data[i].ibu)
+                    const $food = $('<div>').appendTo($beerMoreInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
             },
             () => {
@@ -173,9 +202,8 @@ $(() => {
             })
         }) //end of random button
 
-    $('#reset').on('click', (event) => {
-        $('#search-result').empty().css("display", "none");
-
-    })
+        $('#reset').on('click', (event) => {
+            $('#search-result').empty().css("display", "none");
+        })//end of reset button
 
     }) //end of onload
