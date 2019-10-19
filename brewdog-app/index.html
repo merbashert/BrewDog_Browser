@@ -6,57 +6,55 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 <body>
     <header></header>
-        <div class = "search">
-                <div class = "parameter" id = "nameSearch">
-                    <button id = "nameButton">Search By Name</button>
-                    <input type = "text" placeholder="Name" id = "name"/>
-                </div>
-                <div class = "parameter" id = "abvSearch">
-                    <button id = "abvButton">Search By ABV</button>
-                    <span class = "minmax">
-                        <input type = "text" placeholder="Min" class = "min" id = "minABV"/>
-                        <input type = "text" placeholder="Max" class = "max" id = "maxABV"/>
-                    </span>
-                </div>
-                <div class = "parameter" id = "ibuSearch">
-                    <button id = "ibuButton">Search By IBU</button>
-                    <span class = "minmax">
-                        <input type = "text" placeholder="Min" class = "min" id = "minIBU"/>
-                        <input type = "text" placeholder="Max" class = "max" id = "maxIBU"/>
-                    </span>
-                </div>
-                <div class = "parameter" id = "foodSearch">
-                    <button id = "foodButton">Search By Food Pairing</button>
-                    <input type = "text" placeholder="Food" id = "food"/>
-                </div>
-            <div id = "search-result">
-            </div>
+
+    <div class = "search">
+        <div class = "parameter" id = "nameSearch">
+            <button id = "nameButton">Search By Name</button>
+            <input type = "text" placeholder="Name" id = "name"/>
         </div>
-
-        <div class = "strong-container">
-            <div class = "previous"></div>
-            <div class = "strong-images">
-                <img src = "imgs/Tactical.png">
-                <img src = "imgs/Ghost.png">
-                <img src = "imgs/Black.png">
-                <img src = "imgs/Bismarck.png">
-                <img src = "imgs/History.png">
-            </div>
-            <div class = "next"></div>
+        <div class = "parameter" id = "abvSearch">
+            <button id = "abvButton">Search By ABV</button>
+            <span class = "minmax">
+                <input type = "text" placeholder="Min" class = "min" id = "minABV"/>
+                <input type = "text" placeholder="Max" class = "max" id = "maxABV"/>
+            </span>
         </div>
-
-
-
-    <div class= "random-box">
-        <div class= "random">
-            <h1>Get a random beer</h1>
-            <!-- <div class = "random-parameters"></div> -->
+        <div class = "parameter" id = "ibuSearch">
+            <button id = "ibuButton">Search By IBU</button>
+            <span class = "minmax">
+                <input type = "text" placeholder="Min" class = "min" id = "minIBU"/>
+                <input type = "text" placeholder="Max" class = "max" id = "maxIBU"/>
+            </span>
+        </div>
+        <div class = "parameter" id = "foodSearch">
+            <button id = "foodButton">Search By Food Pairing</button>
+            <input type = "text" placeholder="Food" id = "food"/>
+        </div>
+        <div id = "search-result">
         </div>
     </div>
 
 
+    <div class= "random-box">
+        <h1>Get a random beer</h1>
+        <div class= "random">
+        </div>
+    </div>
+
+    <div class = "strong-container">
+        <div class = "strong-button previous"><span class="lnr lnr-arrow-left-circle"></span></div>
+        <div class = "strong-images">
+            <img src = "imgs/Tactical.png">
+            <img src = "imgs/Ghost.png">
+            <img src = "imgs/Black.png">
+            <img src = "imgs/Bismarck.png">
+            <img src = "imgs/History.png">
+        </div>
+        <div class = "strong-button next"><span class="lnr lnr-arrow-right-circle"></span></div>
+    </div>
 </body>
 </html>

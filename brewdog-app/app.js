@@ -30,7 +30,7 @@ $('.previous').on("click", () => {
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
         $('#search-result').css("display", "block")
-        
+
         const beerName = $('#name').val();
 
         const beerAPI = $.ajax({
@@ -133,8 +133,8 @@ $('.previous').on("click", () => {
         ); $('#food').trigger('reset');
     }); //end of food button
 
-    $('.random').on('click', (event) => {
-        $(event.target).css("opacity", ".5");
+    $('.random-box').one('click', (event) => {
+        $('h1').css("display", "none");
         const promise = $.ajax({
             url: "https://api.punkapi.com/v2/beers/random"
         }).then(
@@ -143,10 +143,10 @@ $('.previous').on("click", () => {
                     const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
                     const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
                     const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
-                    $('.random-box').append(randomBeerName)
-                    $('.random-box').append(randomBeerDescription)
-                    $('.random-box').append(randomBeerABV)
-                    $('.random-box').append(randomBeerIBU)
+                    $('.random').append(randomBeerName)
+                    $('.random').append(randomBeerDescription)
+                    $('.random').append(randomBeerABV)
+                    $('.random').append(randomBeerIBU)
                 })
             })
 
