@@ -1,8 +1,36 @@
 $(() => {
 
+
+let strongChildren = $('.strong-images').children();
+let currentImg = 0;
+let highestIndex = strongChildren.length - 1
+
+$('.next').on('click', () => {
+    strongChildren.eq(currentImg).css("display", "none")
+    if (currentImg < highestIndex) {
+        currentImg++
+    } else {
+        currentImg = 0
+    }
+
+    strongChildren.eq(currentImg).css("display", "block")
+});
+
+$('.previous').on("click", () => {
+    strongChildren.eq(currentImg).css('display', 'none')
+
+    if (currentImg > 0) {
+        currentImg --
+    } else {
+        currentImg = highestIndex
+    }
+    strongChildren.eq(currentImg).css('display', 'block')
+});
+
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
-
+        $('#search-result').css("display", "block")
+        
         const beerName = $('#name').val();
 
         const beerAPI = $.ajax({
@@ -20,13 +48,14 @@ $(() => {
                 }
             },
             () => {
-                alert("What's the name?");
+                alert("Choose the name of your beer!");
             }
         );
     }); //end of name button
 
     $('#abvButton').on('click', (event) => {
         event.preventDefault();
+        $('#search-result').css("display", "block")
 
         const minABV = $('#minABV').val();
         const maxABV = $('#maxABV').val();
@@ -44,16 +73,16 @@ $(() => {
                     const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
                     const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
+            },
+            () => {
+                alert("Choose your ABV minimum and maximum!");
             }
-            // ,
-            // () => {
-            //     alert("What's the name?");
-            // }
         );
     }); //end of abv button
 
     $('#ibuButton').on('click', (event) => {
         event.preventDefault();
+        $('#search-result').css("display", "block")
 
         const minIBU = $('#minIBU').val();
         const maxIBU = $('#maxIBU').val();
@@ -71,21 +100,21 @@ $(() => {
                     const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
                     const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
+            },
+            () => {
+                alert("Choose your IBU minimum and maximum!");
             }
-            // ,
-            // () => {
-            //     alert("What's the name?");
-            // }
         );
     }); //end of ipu button
 
     $('#foodButton').on('click', (event) => {
         event.preventDefault();
+        $('#search-result').css("display", "block")
 
-        const food = $('#food').val();
+        const foodInput = $('#food').val();
 
         const foodAPI = $.ajax({
-            url: 'https://api.punkapi.com/v2/beers?food=' + food
+            url: 'https://api.punkapi.com/v2/beers?food=' + foodInput
         }).then(
             (data) => {
                 for (let i = 0; i < 5; i++) {
@@ -97,12 +126,28 @@ $(() => {
                     const $ibu = $('<div>').appendTo($beerInfo).addClass('ibu').text("IBU: " + data[i].ibu)
                     const $food = $('<div>').appendTo($beerInfo).addClass('food').text("Food pairings: " + data[i].food_pairing)
                 }
+            },
+            () => {
+                alert("Choose what food do you want to pair with!");
             }
-            // ,
-            // () => {
-            //     alert("What's the name?");
-            // }
-        );
+        ); $('#food').trigger('reset');
     }); //end of food button
+
+    $('.random').on('click', (event) => {
+        $(event.target).css("opacity", ".5");
+        const promise = $.ajax({
+            url: "https://api.punkapi.com/v2/beers/random"
+        }).then(
+            (data) => {
+                    const randomBeerName = $('<div>').text("Name: " + data[0].name)
+                    const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
+                    const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
+                    const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
+                    $('.random-box').append(randomBeerName)
+                    $('.random-box').append(randomBeerDescription)
+                    $('.random-box').append(randomBeerABV)
+                    $('.random-box').append(randomBeerIBU)
+                })
+            })
 
 }) //end of onload

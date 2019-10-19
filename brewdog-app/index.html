@@ -9,33 +9,54 @@
 </head>
 <body>
     <header></header>
-    <div class = "search">
-        <div id = "search-box">
-            <div class = "parameter" id = "nameSearch">
-                <button id = "nameButton">Search By Name</button>
-                <input type = "text" placeholder="Name" id = "name"/>
-            </div>
-            <div class = "parameter" id = "abvSearch">
-                <button id = "abvButton">Search By ABV</button>
-                <span class = "minmax">
-                    <input type = "number" placeholder="Min" class = "min" id = "minABV"/>
-                    <input type = "number" placeholder="Max" class = "max" id = "maxABV"/>
-                </span>
-            </div>
-            <div class = "parameter" id = "ibuSearch">
-                <button id = "ibuButton">Search By IBU</button>
-                <span class = "minmax">
-                    <input type = "number" placeholder="Min" class = "min" id = "minIBU"/>
-                    <input type = "number" placeholder="Max" class = "max" id = "maxIBU"/>
-                </span>
-            </div>
-            <div class = "parameter" id = "foodSearch">
-                <button id = "foodButton">Search By Food Pairing</button>
-                <input type = "text" placeholder="Food" id = "food"/>
+        <div class = "search">
+                <div class = "parameter" id = "nameSearch">
+                    <button id = "nameButton">Search By Name</button>
+                    <input type = "text" placeholder="Name" id = "name"/>
+                </div>
+                <div class = "parameter" id = "abvSearch">
+                    <button id = "abvButton">Search By ABV</button>
+                    <span class = "minmax">
+                        <input type = "text" placeholder="Min" class = "min" id = "minABV"/>
+                        <input type = "text" placeholder="Max" class = "max" id = "maxABV"/>
+                    </span>
+                </div>
+                <div class = "parameter" id = "ibuSearch">
+                    <button id = "ibuButton">Search By IBU</button>
+                    <span class = "minmax">
+                        <input type = "text" placeholder="Min" class = "min" id = "minIBU"/>
+                        <input type = "text" placeholder="Max" class = "max" id = "maxIBU"/>
+                    </span>
+                </div>
+                <div class = "parameter" id = "foodSearch">
+                    <button id = "foodButton">Search By Food Pairing</button>
+                    <input type = "text" placeholder="Food" id = "food"/>
+                </div>
+            <div id = "search-result">
             </div>
         </div>
-        <div id = "search-result">
+
+        <div class = "strong-container">
+            <div class = "previous"></div>
+            <div class = "strong-images">
+                <img src = "imgs/Tactical.png">
+                <img src = "imgs/Ghost.png">
+                <img src = "imgs/Black.png">
+                <img src = "imgs/Bismarck.png">
+                <img src = "imgs/History.png">
+            </div>
+            <div class = "next"></div>
+        </div>
+
+
+
+    <div class= "random-box">
+        <div class= "random">
+            <h1>Get a random beer</h1>
+            <!-- <div class = "random-parameters"></div> -->
         </div>
     </div>
+
+
 </body>
 </html>

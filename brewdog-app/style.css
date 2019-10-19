@@ -1,12 +1,15 @@
 /* * {
-    border: 1px solid gold;
+border: 1px solid gold;
 } */
 
-.search {
-    width: 40%;
-}
 
-#search-box {
+/* /////////////////////////////////////////////////////////// Search Box
+//////////////////////////////////////////////////////////*/
+
+.search {
+    width: 80%;
+    /* margin-left: 2em; */
+    margin: 2em auto;
     border: 1px solid black;
 }
 
@@ -22,7 +25,7 @@
 }
 
 .parameter button {
-    margin-right: 20px;
+    width: 23%;
 }
 
 .minmax {
@@ -31,13 +34,72 @@
 }
 
 .min, .max {
-    width: 15%;
+    width: 18%;
+    margin-left: .45em
 }
 
+#name, #food {
+    width: 30%
+}
 #search-result {
     border: 1px solid black;
+    display: none;
 }
 
 .beer-info {
     border-bottom: 1px solid black;
+}
+
+/* /////////////////////////////////////////////////////////// Strong Box
+//////////////////////////////////////////////////////////*/
+
+
+.strong-images {
+    /* width: 40%; */
+    border: 8px solid black;
+    /* position: relative; */
+    /* padding: 0px 20px; */
+}
+
+.strong-images img {
+    display: none;
+    height: 100%
+}
+
+.strong-images img:first-of-type {
+    display: block;
+}
+
+.strong-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.strong-container img{
+    display: none;
+    width: 100%
+}
+
+.next {
+    width: 100px;
+    height: 100px;
+}
+
+.previous {
+    width: 100px;
+    height: 100px;
+}
+
+/* /////////////////////////////////////////////////////////// Random Box
+//////////////////////////////////////////////////////////*/
+
+.random-box {
+    width: 30%;
+    border: 3px solid black;
+    /* background-image: url('imgs/empty-bottle.jpg'); */
+    /* background-repeat: no-repeat; */
+}
+
+h1 {
+    text-align: center;
 }
