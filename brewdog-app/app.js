@@ -56,7 +56,8 @@ $(() => {
         $('#search-result').css("display", "block")
 
         const beerName = $('#name').val();
-        
+        $('input').val('');
+
         const beerAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?beer_name=' + beerName
         }).then(
@@ -90,6 +91,7 @@ $(() => {
 
         const minABV = $('#minABV').val();
         const maxABV = $('#maxABV').val();
+        $('input').val('');
 
         const abvAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?abv_gt=' + minABV + '&abv_lt=' + maxABV
@@ -125,6 +127,8 @@ $(() => {
         const minIBU = $('#minIBU').val();
         const maxIBU = $('#maxIBU').val();
 
+        $('input').val('');
+
         const ibuAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?ibu_gt=' + minIBU + '&ibu_lt=' + maxIBU
         }).then(
@@ -157,7 +161,8 @@ $(() => {
         $('#search-result').css("display", "block")
 
         const foodInput = $('#food').val();
-
+        $('input').val('');
+        
         const foodAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?food=' + foodInput
         }).then(
