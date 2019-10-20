@@ -8,34 +8,35 @@
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-<link href="https://fonts.googleapis.com/css?family=Barlow|Crimson+Text|Fjalla+One|Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Fjalla+One|Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
+    <header>BREWDOG BREWERY</header>
 
     <section1>
         <div class = "search">
+            <h3>Search by:</h3>
             <form><div class = "parameter" id = "nameSearch">
-                <button id = "nameButton">Search By Name</button>
+                <button id = "nameButton">Name</button>
                 <input type = "text" placeholder="Name" id = "name"/>
             </div></form>
             <form><div class = "parameter" id = "abvSearch">
-                <button id = "abvButton">Search By ABV</button>
+                <button id = "abvButton">ABV</button>
                 <span class = "minmax">
-                    <input type = "text" placeholder="Min" class = "min" id = "minABV"/>
-                    <input type = "text" placeholder="Max" class = "max" id = "maxABV"/>
+                    <input type = "text" placeholder="Min ABV" class = "min" id = "minABV"/>
+                    <input type = "text" placeholder="Max ABV" class = "max" id = "maxABV"/>
                 </span>
             </div></form>
             <form><div class = "parameter" id = "ibuSearch">
-                <button id = "ibuButton">Search By IBU</button>
+                <button id = "ibuButton">IBU</button>
                 <span class = "minmax">
-                    <input type = "text" placeholder="Min" class = "min" id = "minIBU"/>
-                    <input type = "text" placeholder="Max" class = "max" id = "maxIBU"/>
+                    <input type = "text" placeholder="Min IBU" class = "min" id = "minIBU"/>
+                    <input type = "text" placeholder="Max IBU" class = "max" id = "maxIBU"/>
                 </span>
             </div></form>
             <form><div class = "parameter" id = "foodSearch">
-                <button id = "foodButton">Search By Food Pairing</button>
-                <input type = "text" placeholder="Food" id = "food"/>
+                <button id = "foodButton">Food Pairing</button>
+                <input type = "text" placeholder="Food Pairing" id = "food"/>
             </div></form>
             <div class = "reset-box"><button id = "reset">Reset</button>
             </div>
