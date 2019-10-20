@@ -6,7 +6,7 @@
 body {
     line-height: 20px;
     background-image: url("imgs/Background.jpg");
-    background-size: contain;
+    background-size: cover;
 }
 
 
@@ -16,7 +16,7 @@ section1 {
     margin-bottom: 20px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 480px) {
     section1 {
         flex-direction: row;
         justify-content: space-between;
@@ -47,9 +47,8 @@ section1 {
     background-color: var(--button-color);
     border: 2px outset var(--button-color);
     color: ivory;
-    font-size: 12px;
-    line-height: 12px;
-    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    line-height: 15px;
 }
 
 input {
@@ -120,7 +119,7 @@ h2 {
 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 480px) {
     .search {
         width: 50%
     }
@@ -229,11 +228,13 @@ Strong Box
     margin-top: 10px;
     margin-right: 10px;
     margin: 10px 10px 10px 0px;
+    /* background-color: rgb(144,93,61, .6) */
 }
 
 .strong-button {
-    padding: 3px;
+    margin: 6px;
 }
+
 
 .strong-text {
     width: 40%;
@@ -264,7 +265,7 @@ h4 {
     font-size: 16px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 480px) {
     .strong-container {
         display: flex;
         flex-direction: row;

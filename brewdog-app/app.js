@@ -167,7 +167,7 @@ $(() => {
         event.preventDefault();
 
         $('.click-beer').css("display", "block")
-        
+
         $('#search-result').css("display", "block")
 
         const foodInput = $('#food').val();
@@ -219,6 +219,8 @@ $(() => {
 
         $('#reset').on('click', (event) => {
             $('#search-result').empty().css("display", "none");
+            $('.click-beer').css("display", "none");
+
         })//end of reset button
 
     }) //end of onload
