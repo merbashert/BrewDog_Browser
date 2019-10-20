@@ -56,7 +56,7 @@ section1 {
 .parameter {
     display: flex;
     justify-content: space-between;
-    margin: 5px;
+    margin: 4px 9px;
 }
 
 .parameter button {
@@ -69,7 +69,6 @@ section1 {
     font-size: 14px;
     line-height: 15px;
     font-family: 'Special Elite', cursive;
-    margin-left: 4px;
 }
 
 input {
@@ -153,6 +152,7 @@ h2 {
     h2 {
         margin: 10px;
         width: 100%;
+        font-size: 30px;
     }
 }
 
@@ -190,7 +190,7 @@ Random Box
 
 
 h1 {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Special Elite', cursive;
     text-align: center;
 }
@@ -283,10 +283,6 @@ Strong Box
 
 .strong-fact:first-of-type {
     display: block;
-}
-
-h3 {
-
 }
 
 h4 {
