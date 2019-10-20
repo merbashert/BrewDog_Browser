@@ -201,8 +201,9 @@ $(() => {
     }); //end of food button
 
     $('.random-box').one('click', (event) => {
-        $('h1').css("display", "none");
-        const promise = $.ajax({
+        $('h1').remove();
+        $('.random').css("display", "block")
+        const $promise = $.ajax({
             url: "https://api.punkapi.com/v2/beers/random"
         }).then(
             (data) => {
@@ -210,12 +211,34 @@ $(() => {
                 const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
                 const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
                 const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
+                const clickForAnother = $('<div>').text("Click for another random beer!").addClass("click-for-another")
                 $('.random').append(randomBeerName)
                 $('.random').append(randomBeerDescription)
                 $('.random').append(randomBeerABV)
                 $('.random').append(randomBeerIBU)
+                $('.random').append(clickForAnother)
+            })
+
+            $('.random').on("click", (event) => {
+                $('.random').empty();
+                const $promise = $.ajax({
+                    url: "https://api.punkapi.com/v2/beers/random"
+                }).then(
+                    (data) => {
+                        const randomBeerName = $('<div>').text("Name: " + data[0].name)
+                        const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
+                        const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
+                        const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
+                        const clickForAnother = $('<div>').text("Click for another random beer!").addClass("click-for-another")
+                        $('.random').append(randomBeerName)
+                        $('.random').append(randomBeerDescription)
+                        $('.random').append(randomBeerABV)
+                        $('.random').append(randomBeerIBU)
+                        $('.random').append(clickForAnother)
+                    })
             })
         }) //end of random button
+
 
         $('#reset').on('click', (event) => {
             $('#search-result').empty().css("display", "none");
