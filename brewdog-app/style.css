@@ -1,6 +1,15 @@
-/* * {
-border: 1px solid gold;
-} */
+:root {
+    --button-color: #7C4236
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 20px;
+    background-image: url("imgs/Background.jpg");
+    background-size: cover;
+}
+
 
 section1 {
     display: flex;
@@ -24,6 +33,7 @@ section1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgb(144,93,61, .6);
 }
 
 .parameter {
@@ -35,8 +45,17 @@ section1 {
 .parameter button {
     width: 100px;
     height: 35px;
-    background-color: blue;
+    background-color: var(--button-color);
+    border: 2px outset var(--button-color);
     color: white;
+    font-size: 12px;
+    font-family: 'Crimson Text', serif;
+    line-height: 15px;
+}
+
+input {
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
 }
 
 .reset-box {
@@ -47,10 +66,12 @@ section1 {
 #reset {
     width: 150px;
     height: 35px;
-    background-color: blue;
+    background-color: var(--button-color);
+    border: 2px outset var(--button-color);
     color: white;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin: 20px 0px;
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
 }
 
 .minmax {
@@ -67,6 +88,11 @@ section1 {
     width: 30%
 }
 
+.click-beer {
+    margin-left: 5px;
+    display: none;
+}
+
 #search-result {
     border: 1px solid black;
     display: none;
@@ -76,14 +102,18 @@ section1 {
 .beer-info {
     border-bottom: 1px solid black;
     margin: 5px;
+    cursor: pointer;
+
 }
 
 .more-info {
     display: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 h2 {
-    margin-left: 25px;
+    margin-left: 10px;
+    font-family: Times;
 }
 
 @media (min-width: 700px) {
@@ -106,29 +136,33 @@ Random Box
 
 .random-box {
     width: 60%;
-    height: 280px;
+    height: 300px;
     margin: 10px auto;
     border: 1px solid black;
-    background-image: url('imgs/empty-bottle.jpg');
-    background-repeat: no-repeat;
+    background-image: url('imgs/empty-bottle.png');
+    background-repeat: repeat;
     background-size: contain;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(144,93,61, .6)
 }
 
 .random {
     padding: 0px 5px;
-    color: blue;
+    color: #C19A6B;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgb(110,54,45,.6);
+}
+
+.random div {
+    font-family: 'Crimson Text', serif;
 }
 
 h1 {
-    text-align: center;
-    font-size: 20px;
-
+    font-size: 30px;
+    font-family: 'Special Elite', cursive;
 }
 
 @media (min-width: 600px) {
@@ -148,7 +182,8 @@ h1 {
 }
 
 
-/* /////////////////////////////////////////////////////////// Strong Box
+/* ///////////////////////////////////////////////////////////
+Strong Box
 //////////////////////////////////////////////////////////*/
 
 .strong-container {
@@ -183,14 +218,23 @@ h1 {
     margin-top: 10px;
 }
 
+.strong-button {
+    padding: 3px;
+}
+
 .strong-text {
     width: 40%;
     font-size: 16px;
-    padding-left: 30px;
+    padding: 0px 20px;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: .3px;
+    background-color: rgb(110,54,45,.6);
+    color: #C19A6B;
 }
 
 .strong-fact {
     display: none;
+
 }
 
 .strong-fact:first-of-type {

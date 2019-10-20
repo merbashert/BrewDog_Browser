@@ -53,6 +53,8 @@ $(() => {
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
 
+        $('.click-beer').css("display", "block")
+
         $('#search-result').css("display", "block")
 
         const beerName = $('#name').val();
@@ -86,6 +88,8 @@ $(() => {
 
     $('#abvButton').on('click', (event) => {
         event.preventDefault();
+
+        $('.click-beer').css("display", "block")
 
         $('#search-result').css("display", "block")
 
@@ -122,6 +126,9 @@ $(() => {
 
     $('#ibuButton').on('click', (event) => {
         event.preventDefault();
+
+        $('.click-beer').css("display", "block")
+
         $('#search-result').css("display", "block")
 
         const minIBU = $('#minIBU').val();
@@ -158,11 +165,14 @@ $(() => {
 
     $('#foodButton').on('click', (event) => {
         event.preventDefault();
+
+        $('.click-beer').css("display", "block")
+        
         $('#search-result').css("display", "block")
 
         const foodInput = $('#food').val();
         $('input').val('');
-        
+
         const foodAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?food=' + foodInput
         }).then(
