@@ -7,6 +7,7 @@ body {
     line-height: 20px;
     background-image: url("imgs/Background.jpg");
     background-size: cover;
+    position: absolute;
 }
 
 
@@ -143,11 +144,11 @@ Random Box
 
 .random-box {
     width: 40%;
-    height: 300px;
+    height: 310px;
     margin: 10px auto;
     border: 1px solid black;
     background-image: url('imgs/empty-bottle.png');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     display: flex;
@@ -164,6 +165,7 @@ Random Box
     background-color: rgb(110,54,45,.6);
 }
 
+
 .random div {
     font-family: 'Crimson Text', serif;
 }
@@ -171,6 +173,7 @@ Random Box
 h1 {
     font-size: 20px;
     font-family: 'Special Elite', cursive;
+    text-align: center;
 }
 
 @media (min-width: 700px) {
