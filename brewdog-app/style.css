@@ -4,10 +4,9 @@
 
 
 body {
-    font-family: 'Barlow Semi Condensed', sans-serif;
     line-height: 20px;
     background-image: url("imgs/Background.jpg");
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -47,14 +46,13 @@ section1 {
     height: 35px;
     background-color: var(--button-color);
     border: 2px outset var(--button-color);
-    color: white;
+    color: ivory;
     font-size: 12px;
+    line-height: 12px;
     font-family: 'Crimson Text', serif;
-    line-height: 15px;
 }
 
 input {
-    font-family: 'Crimson Text', serif;
     font-size: 14px;
     background-color: ivory;
 }
@@ -69,7 +67,7 @@ input {
     height: 35px;
     background-color: var(--button-color);
     border: 2px outset var(--button-color);
-    color: white;
+    color: ivory;
     margin: 20px 0px;
     font-family: 'Crimson Text', serif;
     font-size: 16px;
@@ -104,6 +102,7 @@ input {
     border-bottom: 1px solid black;
     margin: 5px;
     cursor: pointer;
+    font-family: 'Special Elite', cursive;
 
 }
 
@@ -113,11 +112,15 @@ input {
 }
 
 h2 {
-    margin-left: 10px;
-    font-family: Times;
+    margin: 3px auto;
+    font-family: 'Special Elite', cursive;
+    width: 200px;
+    text-align: center;
+    line-height: 30px;
+
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .search {
         width: 50%
     }
@@ -126,6 +129,10 @@ h2 {
         width: 100%;
     }
 
+    h2 {
+        margin: 10px;
+        width: 100%;
+    }
 }
 
 
@@ -153,6 +160,7 @@ Random Box
 .random {
     padding: 0px 5px;
     color: #C19A6B;
+    text-shadow: 1px 1px #4E342E;
     text-align: left;
     background-color: rgb(110,54,45,.6);
 }
@@ -219,6 +227,8 @@ Strong Box
     height: 20%;
     font-size: 40px;
     margin-top: 10px;
+    margin-right: 10px;
+    margin: 10px 10px 10px 0px;
 }
 
 .strong-button {
@@ -233,6 +243,8 @@ Strong Box
     letter-spacing: .3px;
     background-color: rgb(110,54,45,.6);
     color: #C19A6B;
+    text-shadow: 1px 2px #4E342E;
+    margin-left: 5px;
 }
 
 .strong-fact {
@@ -242,6 +254,10 @@ Strong Box
 
 .strong-fact:first-of-type {
     display: block;
+}
+
+h3 {
+
 }
 
 h4 {
