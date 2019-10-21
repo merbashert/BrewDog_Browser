@@ -7,6 +7,21 @@ $(() => {
     let highestText = strongText.length - 1
     //add variables for slideshow function
 
+    const nav = document.querySelector('#navbar')
+    const navTop = nav.offsetTop;
+
+    const stickyNavigation = () => {
+
+
+        if (window.scrollY >= navTop) {
+            navbar.classList.add("fixed")
+        } else {
+            navbar.classList.remove("fixed")
+        }
+    }
+
+    window.addEventListener('scroll', stickyNavigation)
+
     $('.next').on('click', () => {
         strongChildren.eq(currentImg).css("display", "none")
         if (currentImg < highestIndex) {
@@ -243,14 +258,14 @@ $(() => {
                         $('.random').append(randomBeerIBU)
                         $('.random').append(clickForAnother)
                     })
-            })
-        }) //end of random button
+                })
+            }) //end of random button
 
 
-        $('#reset').on('click', (event) => {
-            $('#search-result').empty().css("display", "none");
-            $('.click-beer').css("display", "none");
+            $('#reset').on('click', (event) => {
+                $('#search-result').empty().css("display", "none");
+                $('.click-beer').css("display", "none");
 
-        })//end of reset button
+            })//end of reset button
 
-    }) //end of onload
+        }) //end of onload

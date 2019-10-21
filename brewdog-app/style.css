@@ -4,18 +4,45 @@
 
 
 body {
-    line-height: 20px;
     background-image: url("imgs/Background.jpg");
     background-size: auto;
-    position: absolute;
+    background-position: absolute;
 }
 
-header {
+
+#navbar {
+    background-color: var(--button-color);
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #DBB27A;
+    font-size: 16px;
+    margin: 20px;
     font-family: 'Special Elite', cursive;
-    text-align: center;
-    font-size: 80px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.fixed + .content {
+    padding-top: 60px;
+}
+
+#heading {
+    font-family: 'Special Elite', cursive;
+    font-size: 60px;
     margin: 40px 0px 15px 0px;
     line-height: 70px;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -47,11 +74,11 @@ section1 {
 }
 
 .search h3 {
-        font-family: 'Special Elite', cursive;
-        margin: 8px;
-        color: #DBB27A;
-        font-size: 20px;
-        text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
+    font-family: 'Special Elite', cursive;
+    margin: 8px;
+    color: #DBB27A;
+    font-size: 20px;
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .parameter {
