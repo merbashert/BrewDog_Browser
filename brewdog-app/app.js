@@ -11,8 +11,6 @@ $(() => {
     const navTop = nav.offsetTop;
 
     const stickyNavigation = () => {
-
-
         if (window.scrollY >= navTop) {
             navbar.classList.add("fixed")
         } else {
@@ -103,6 +101,7 @@ $(() => {
             },
             () => {
                 alert("Choose the name of your beer!");
+
             }//pull info from AJAX
         );
     }); //end of name button functionality
