@@ -8,6 +8,7 @@ body {
     background-size: auto;
     background-position: absolute;
     font-family: 'Special Elite', cursive;
+    padding-top: 20px;
 }
 
 #navbar {
@@ -16,25 +17,26 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 #navbar a {
     text-decoration: none;
     color: #DBB27A;
-    font-size: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
     margin: 20px;
 }
 
 .fixed {
     position: fixed;
     top: 0;
-    width: 98.5%;
+    width: 97%;
 }
 
 
 #heading {
-    font-size: 60px;
+    font-size: 40px;
     margin: 40px 0px 15px 0px;
     line-height: 70px;
     display: flex;
@@ -53,6 +55,18 @@ section1 {
     section1 {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    #navbar a {
+        font-size: 18px;
+    }
+
+    #heading {
+        font-size: 55px;
+    }
+
+    .fixed {
+        width: 98.5%;
     }
 }
 /* ///////////////////////////////////////////////////////////
