@@ -84,7 +84,8 @@ $(() => {
     //adding functionality to previous button
 
     $('.fave-heading').on("click", () => {
-        $('#modal').slideDown(400)
+        $('#modal').slideToggle(400);
+
 
     })
 
