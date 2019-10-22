@@ -43,6 +43,8 @@ Search results are also returned with an option to add beer to Favorite Beers.  
 
 Reset button empties previous search results div as well as instructions about clicking on a beer for more info.
 
+Search results are also reset each time the user performs a new search.  The reset happens when the user clicks the new parameter button they're searching for, or else hits return.
+
 
 ### *Random Beer:*
 Random beer box has background image of beer bottle.  Text on top of beer bottle is clickable and will use the Random Beer function of the PunkAPI to return the value of a random beer.  Upon return, the text on top of the beer bottle disappears and the info for the random beer appears.  The random beer info area becomes clickable, and can be clicked on to run the Random Beer functions again.
@@ -56,4 +58,5 @@ Strong Beers is made up of two carousels that are running simultaneously.  One s
 Site is designed mostly with percentages and works on all widths of web use, as well as on mobile.  Elements that needed to remain a certain height due to room for background images or text that eventually appears within the element were assigned concrete pixel values and change with media queries.  ABV and IBU hover functions have a specific functionality for mobile since hover is not available on mobile devices.
 
 ### *Unsolved Issues:*
-I feel good about the functionality of the site!  I figured out how to do everything I wanted it to do.
+I wanted to add the ability to add a beer from the random beer generator to the favorite beer list, but I was worried about breaking the functionality.
+Occasionally a beer description longer than the height of the random box is generated.  It happens maybe 1 in every 20 descriptions.  It overflows the box and looks bad, but I didn't want to make the height of the box to compensate for such a rare occurence. 
