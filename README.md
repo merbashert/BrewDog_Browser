@@ -1,4 +1,4 @@
-#First Project: BrewDog Browser
+# First Project: BrewDog Browser
 
 ## **Live site:**
 https://merbashert.github.io/brewdog-app/
@@ -10,8 +10,8 @@ https://merbashert.github.io/brewdog-app/
 - jQuery
 
 ## **Resources:**
-[PunkAPI]
-(https://punkapi.com/)
+
+API Data sourced from [PunkAPI](https://punkapi.com/).
 
 ## **Site Functionality:**
 
@@ -54,3 +54,6 @@ Strong Beers is made up of two carousels that are running simultaneously.  One s
 
 ### *Responsive Design:*
 Site is designed mostly with percentages and works on all widths of web use, as well as on mobile.  Elements that needed to remain a certain height due to room for background images or text that eventually appears within the element were assigned concrete pixel values and change with media queries.  ABV and IBU hover functions have a specific functionality for mobile since hover is not available on mobile devices.
+
+### *Unsolved Issues:*
+I feel good about the functionality of the site!  I figured out how to do everything I wanted it to do.
