@@ -5,7 +5,7 @@ $(() => {
     let currentText = 0;
     let highestIndex = strongChildren.length - 1
     let highestText = strongText.length - 1
-        //add variables for slideshow function
+    //add variables for slideshow function
 
 
     let faveBeers = localStorage.getItem('Favorite Beers') ?
@@ -16,7 +16,10 @@ $(() => {
     localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
     for (let i = 0; i < faveBeers.length; i++) {
         $('<div>').text("•" + faveBeers[i]).appendTo('#modal').addClass("fave-remember")
-    }
+    } //create beer favorites list
+
+
+    //////////Buttons///////
 
     $('.clear').on("click", () => {
         localStorage.clear();
@@ -85,9 +88,17 @@ $(() => {
 
     $('.fave-heading').on("click", () => {
         $('#modal').slideToggle(400);
-
-
     })
+
+    $('#reset').on('click', (event) => {
+        $('#search-result').empty().css("display", "none");
+        $('.click-beer').css("display", "none");
+
+    })//end of reset button
+
+    /////////////////////////////////////////////////////////////////
+    //API Functions//
+    ////////////////////////////////////////////////////////////////
 
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
@@ -98,8 +109,8 @@ $(() => {
         const beerName = $('#name').val();
 
         $('input').val('');
-
         //reset value of input box
+
         const beerAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?beer_name=' + beerName
         }).then(
@@ -117,14 +128,14 @@ $(() => {
 
                     $name.on("click", () => {
                         $beerMoreInfo.toggle();
-                    })
+                    }) //show more beer info
 
                     $add.on("click", () => {
                         faveBeers.push(data[i].name)
                         localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
                         $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember");
                         $('#modal').slideDown(400).delay(2000).slideUp(400);
-
+                        //add beer to favorite list
 
 
                     })
@@ -322,11 +333,5 @@ $(() => {
                 })
             }) //end of random button
 
-
-            $('#reset').on('click', (event) => {
-                $('#search-result').empty().css("display", "none");
-                $('.click-beer').css("display", "none");
-
-            })//end of reset button
 
         }) //end of onload

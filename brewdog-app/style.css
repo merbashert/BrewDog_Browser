@@ -1,19 +1,22 @@
 :root {
-    --button-color: #7C4236
+    --dark-brown: #7C4236;
+    --light-brown: #DBB27A;
+    --tan: #C19A6B;
 }
 
-.favorites {
-    background-color: white;
-}
+
 body {
     background-image: url("imgs/Background.jpg");
     background-size: auto;
     background-attachment: fixed;
     font-family: 'Special Elite', cursive;
+    cursor:default;
 }
 
+/* Nav Bar */
+
 #navbar {
-    background-color: var(--button-color);
+    background-color: var(--dark-brown);
     height: 78px;
     display: flex;
     justify-content: space-around;
@@ -22,12 +25,11 @@ body {
     top: 0;
     right: 0px;
     width: 100%;
-
 }
 
 #navbar a, .fave-heading {
     text-decoration: none;
-    color: #DBB27A;
+    color: var(--light-brown);
     text-align: center;
     font-size: 14px;
     line-height: 20px;
@@ -35,13 +37,12 @@ body {
 }
 
 
-
 #modal {
     display: none;
     background-color: rgb(255,255,240, .8);
     color: #ECDECA
     margin-top: 10px;
-    width: 180px;
+    width: 200px;
     padding: 5px;
     font-size: 12px;
     position: fixed;
@@ -50,7 +51,7 @@ body {
 
 #modal button {
     background-color: rgb(255,255,240, .8);
-    border: 1px solid #7C4236;
+    border: 1px solid var(--dark-brown);
     font-family: 'Oswald', sans-serif;
     margin: 5px;
     border-radius: 3px;
@@ -63,18 +64,17 @@ body {
     line-height: 70px;
     display: flex;
     justify-content: center;
-
 }
 
 
-section1 {
+section {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
 @media (min-width: 700px) {
-    section1 {
+    section {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -108,7 +108,7 @@ section1 {
 
 .search h3 {
     margin: 8px;
-    color: #DBB27A;
+    color: var(--light-brown);
     font-size: 20px;
     text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
 }
@@ -116,11 +116,10 @@ section1 {
 .search h5 {
     font-size: 12px;
     margin: 1px 5px 1px 10px;
-    color: #DBB27A;
+    color: var(--light-brown);
     text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
     line-height: 14px;
     display: none;
-
 }
 
 #mobileHelp {
@@ -137,9 +136,9 @@ section1 {
 .parameter button {
     width: 100px;
     height: 40px;
-    background-color: var(--button-color);
-    border: 2px outset var(--button-color);
-    color: #DBB27A;
+    background-color: var(--dark-brown);
+    border: 2px outset var(--dark-brown);
+    color: var(--light-brown);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
     font-size: 14px;
     line-height: 15px;
@@ -152,24 +151,6 @@ input {
     background-color: #ECDECA;
 }
 
-.reset-box {
-    display: flex;
-    justify-content: center;
-}
-
-#reset {
-    width: 150px;
-    height: 35px;
-    background-color: var(--button-color);
-    border: 2px outset var(--button-color);
-    font-family: 'Special Elite', cursive;
-    color: #DBB27A;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-    margin: 20px 0px;
-    font-size: 18px;
-    border-radius: 3px;
-}
-
 .minmax {
     display: flex;
     justify-content: flex-end;
@@ -178,40 +159,58 @@ input {
 .min, .max {
     width: 19.5%;
     margin-left: .45em;
-    color: #7C4236;
+    color: var(--dark-brown);
     font-family: 'Oswald', sans-serif;
     padding-left: 2px;
 }
 
 #name, #food {
     width: 31%;
-    color: #7C4236;
+    color: var(--dark-brown);
     font-family: 'Oswald', sans-serif;
     padding-left: 5px;
 }
 
 ::placeholder {
-    color: #7C4236;
+    color: var(--dark-brown);
 }
 
 .click-beer {
     margin-left: 5px;
     display: none;
     font-family: 'Fjalla One', sans-serif;
-    color: #C19A6B;
+    color: var(--tan);
+}
+
+.reset-box {
+    display: flex;
+    justify-content: center;
+}
+
+#reset {
+    width: 150px;
+    height: 35px;
+    background-color: var(--dark-brown);
+    border: 2px outset var(--dark-brown);
+    font-family: 'Special Elite', cursive;
+    color: var(--light-brown);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    margin: 20px 0px;
+    font-size: 18px;
+    border-radius: 3px;
 }
 
 #search-result {
-    border: 1px solid #7C4236;
+    border: 1px solid var(--dark-brown);
     display: none;
     width: 100%;
 }
 
 .beer-info {
-    border-bottom: 1px solid #7C4236;
+    border-bottom: 1px solid var(--dark-brown);
     margin: 5px;
     cursor: pointer;
-    color: #C19A6B;
+    color: var(--tan);
     text-shadow: 1px 1px black;
 
 }
@@ -239,22 +238,19 @@ h2 {
     width: 200px;
     text-align: center;
     line-height: 30px;
-
 }
+
 
 @media (min-width: 700px) {
     .search {
         width: 50%
     }
 
-
     h2 {
         margin: 10px;
         width: 100%;
         font-size: 30px;
     }
-
-
 
     .min, .max {
         width: 23.5%;
@@ -295,7 +291,7 @@ h2 {
 
 .random {
     padding: 0px 5px;
-    color: #C19A6B;
+    color: var(--tan);
     text-shadow: 1px 1px #4E342E;
     text-align: left;
     background-color: rgb(110,54,45,.6);
@@ -375,7 +371,7 @@ h1 {
 
 .strong-button {
     margin: 6px;
-    color: #C19A6B;
+    color: var(--tan);
     text-shadow: 2px 2px #4E342E;
     font-size: 45px;
 }
@@ -388,7 +384,7 @@ h1 {
     font-family: 'Fjalla One', sans-serif;
     letter-spacing: .3px;
     background-color: rgb(110,54,45,.6);
-    color: #C19A6B;
+    color: var(--tan);
     text-shadow: 1px 2px #4E342E;
     margin-left: 5px;
     border-radius: 3px;
@@ -420,4 +416,19 @@ h4 {
     .strong-images img {
         height: 400px;
     }
+}
+
+footer {
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20px;
+    color: var(--tan);
+}
+
+footer a:link {
+    color: var(--tan)
+}
+
+footer a:visited {
+    color: var(--tan)
 }
