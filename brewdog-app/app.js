@@ -5,6 +5,16 @@ $(() => {
     let currentText = 0;
     let highestIndex = strongChildren.length - 1
     let highestText = strongText.length - 1
+    let faveBeers = localStorage.getItem('Favorite Beers') ?
+    JSON.parse(localStorage.getItem('Favorite Beers')) : []
+
+
+
+    localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+    for (let i = 0; i < faveBeers.length; i++) {
+        $('<div>').text("•" + faveBeers[i]).appendTo('#modal')
+    }
+
     //add variables for slideshow function
 
     const nav = document.querySelector('#navbar')
@@ -68,21 +78,28 @@ $(() => {
     });
     //adding functionality to previous button
 
+    $('.fave-heading').on("click", () => {
+        $('#modal').toggle();
+
+    })
 
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
 
-        $('.click-beer').css("display", "block")
-        //show click on beer message
+
         $('#search-result').css("display", "block")
         //show results of search
         const beerName = $('#name').val();
+
         $('input').val('');
+
         //reset value of input box
         const beerAPI = $.ajax({
             url: 'https://api.punkapi.com/v2/beers?beer_name=' + beerName
         }).then(
             (data) => {
+                $('.click-beer').css("display", "block")
+                //show click on beer message
                 for (let i = 0; i < 5; i++) {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
@@ -109,7 +126,6 @@ $(() => {
     $('#abvButton').on('click', (event) => {
         event.preventDefault();
 
-        $('.click-beer').css("display", "block")
 
         $('#search-result').css("display", "block")
 
@@ -121,6 +137,7 @@ $(() => {
             url: 'https://api.punkapi.com/v2/beers?abv_gt=' + minABV + '&abv_lt=' + maxABV
         }).then(
             (data) => {
+                $('.click-beer').css("display", "block")
                 for (let i = 0; i < 5; i++) {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
@@ -147,8 +164,6 @@ $(() => {
     $('#ibuButton').on('click', (event) => {
         event.preventDefault();
 
-        $('.click-beer').css("display", "block")
-
         $('#search-result').css("display", "block")
 
         const minIBU = $('#minIBU').val();
@@ -160,6 +175,8 @@ $(() => {
             url: 'https://api.punkapi.com/v2/beers?ibu_gt=' + minIBU + '&ibu_lt=' + maxIBU
         }).then(
             (data) => {
+                $('.click-beer').css("display", "block")
+
                 for (let i = 0; i < 5; i++) {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
@@ -186,8 +203,6 @@ $(() => {
     $('#foodButton').on('click', (event) => {
         event.preventDefault();
 
-        $('.click-beer').css("display", "block")
-
         $('#search-result').css("display", "block")
 
         const foodInput = $('#food').val();
@@ -197,15 +212,24 @@ $(() => {
             url: 'https://api.punkapi.com/v2/beers?food=' + foodInput
         }).then(
             (data) => {
+                $('.click-beer').css("display", "block")
+
                 for (let i = 0; i < 5; i++) {
                     const $beerInfo = $('<div>').addClass("beer-info")
                     $('#search-result').append($beerInfo)
                     const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
+                    const $add = $('<div>').appendTo($beerInfo).text("+").css("font-size", "20px")
 
                     const $beerMoreInfo = $('<div>').appendTo($beerInfo).addClass("more-info")
 
                     $name.on("click", () => {
                         $beerMoreInfo.toggle();
+                    })
+
+                    $add.on("click", () => {
+                        faveBeers.push(data[i].name)
+                        localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+                        $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1])
                     })
 
                     const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)

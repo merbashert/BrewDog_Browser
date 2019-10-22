@@ -2,7 +2,9 @@
     --button-color: #7C4236
 }
 
-
+.favorites {
+    background-color: white;
+}
 body {
     background-image: url("imgs/Background.jpg");
     background-size: auto;
@@ -19,7 +21,7 @@ body {
     align-items: center;
 }
 
-#navbar a {
+#navbar a, .fave-heading {
     text-decoration: none;
     color: #DBB27A;
     text-align: center;
@@ -28,10 +30,23 @@ body {
     margin: 20px;
 }
 
+.fave-heading {
+    border-right: 1px solid #DBB27A;
+    padding-right: 40px;
+}
 .fixed {
     position: fixed;
     top: 0;
     width: 97%;
+}
+
+#modal {
+    display: none;
+    background-color: rgb(144,93,61, .6);
+    color: #ECDECA
+    margin-top: 10px;
+    width: 250px;
+    padding: 5px;
 }
 
 
@@ -57,7 +72,7 @@ section1 {
         justify-content: space-between;
     }
 
-    #navbar a {
+    #navbar a, .fave-heading {
         font-size: 18px;
     }
 
@@ -138,7 +153,7 @@ input {
 }
 
 .min, .max {
-    width: 18.5%;
+    width: 19.5%;
     margin-left: .45em;
     color: #7C4236;
     font-family: 'Oswald', sans-serif;
@@ -155,6 +170,7 @@ input {
 ::placeholder {
     color: #7C4236;
 }
+
 .click-beer {
     margin-left: 5px;
     display: none;
@@ -173,7 +189,7 @@ input {
     margin: 5px;
     cursor: pointer;
     color: #C19A6B;
-    text-shadow: 1px 1px #4E342E;
+    text-shadow: 1px 1px black;
 
 }
 
@@ -184,7 +200,8 @@ input {
 .more-info {
     display: none;
     font-family: 'Oswald', sans-serif;
-    color: #C19A6B;
+    color: #3B2824;
+    text-shadow: none;
 }
 
 h2 {
