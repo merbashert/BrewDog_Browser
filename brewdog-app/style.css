@@ -15,7 +15,7 @@ body {
 
 #navbar {
     background-color: var(--button-color);
-    height: 70px;
+    height: 78px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,7 +27,7 @@ body {
     text-align: center;
     font-size: 14px;
     line-height: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .fave-heading {
@@ -38,7 +38,7 @@ body {
 .fixed {
     position: fixed;
     top: 0;
-    width: 97%;
+    width: 95.65%;
 }
 
 #modal {
@@ -48,6 +48,7 @@ body {
     margin-top: 10px;
     width: 250px;
     padding: 5px;
+    font-size: 12px;
 }
 
 
@@ -87,6 +88,10 @@ section1 {
 
     .fixed {
         width: 98.5%;
+    }
+
+    #modal {
+        font-size: 16px;
     }
 }
 /* ///////////////////////////////////////////////////////////
