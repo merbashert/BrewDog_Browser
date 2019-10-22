@@ -33,15 +33,15 @@ Search function for searching BrewDog beer database:
 - Search by minimum and maximum IBU
 - Search by food pairing
 
-Search parameters can be submitted by clicking the button for the specific search category or by hitting return.  If the field is not filled out, an alert will prompt the user to enter the requested values.  
+- Search parameters can be submitted by clicking the button for the specific search category or by hitting return.  If the field is not filled out, an alert will prompt the user to enter the requested values.  
 
-ABV and IPU buttons have a hover function that will display an explanation of what the terms mean at the bottom of the search box.  In mobile version, instructions appear to tap on the button to get an explanation of what the terms mean.
+- ABV and IPU buttons have a hover function that will display an explanation of what the terms mean at the bottom of the search box.  In mobile version, instructions appear to tap on the button to get an explanation of what the terms mean.
 
-Search results are returned as beer names, along with instructions to click on an individual beer to see more information about it.   Beer names can be clicked on again to hide the extra info.  
+- Search results are returned as beer names, along with instructions to click on an individual beer to see more information about it.   Beer names can be clicked on again to hide the extra info.  
 
-Search results are also returned with an option to add beer to Favorite Beers.  When a beer is added to Favorite Beers, the modal attached to the Favorite Beers in the navbar appears and disappears again, to indicate beer has been added.  Favorite Beers is stored in local storage as strings and will always be available in the favorites box upon reload.   
+- Search results are also returned with an option to add beer to Favorite Beers.  When a beer is added to Favorite Beers, the modal attached to the Favorite Beers in the navbar appears and disappears again, to indicate beer has been added.  Favorite Beers is stored in local storage as strings and will always be available in the favorites box upon reload.   
 
-Reset button empties previous search results div as well as instructions about clicking on a beer for more info.
+- Reset button empties previous search results div as well as instructions about clicking on a beer for more info.
 
 
 ### *Random Beer:*
