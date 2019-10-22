@@ -1,17 +1,17 @@
-First Project: BrewDog Browser
+#First Project: BrewDog Browser
 
 ## **Live site:**
 https://merbashert.github.io/brewdog-app/
 
 ## **Technologies Used:**
-*HTML
-*CSS
-*JavaScript
-*jQuery
+- HTML
+- CSS
+- JavaScript
+- jQuery
 
 ## **Resources:**
-PunkAPI
-https://punkapi.com/
+[PunkAPI]
+(https://punkapi.com/)
 
 ## **Site Functionality:**
 
@@ -28,10 +28,10 @@ https://punkapi.com/
 
 ### *Search Box:*
 Search function for searching BrewDog beer database:
-	- Search by name of beer
-	- Search by minimum and maximum ABV
-	- Search by minimum and maximum IBU
-	- Search by food pairing
+- Search by name of beer
+- Search by minimum and maximum ABV
+- Search by minimum and maximum IBU
+- Search by food pairing
 
 Search parameters can be submitted by clicking the button for the specific search category or by hitting return.  If the field is not filled out, an alert will prompt the user to enter the requested values.  
 
