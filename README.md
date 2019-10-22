@@ -1,21 +1,21 @@
 First Project: BrewDog Browser
 
-**Live site:**
+## **Live site:**
 https://merbashert.github.io/brewdog-app/
 
-Technologies Used:
-• HTML
-• CSS
-• JavaScript
-• jQuery
+## **Technologies Used:**
+*HTML
+*CSS
+*JavaScript
+*jQuery
 
-Resources:
+## **Resources:**
 PunkAPI
 https://punkapi.com/
 
-Site Functionality:
+## **Site Functionality:**
 
-Nav Bar:
+## **Nav Bar:**
 • Sticky navbar
 • Link to BrewDogs official website
 • Download link for Brew Dogs back catalog/recipe book
@@ -26,7 +26,7 @@ Nav Bar:
 	• Clear button will clear Local Storage of all saved favorite beers
 
 
-Search Box:
+## **Search Box:**
 Search function for searching BrewDog beer database:
 	•Search by name of beer
 	•Search by minimum and maximum ABV
@@ -44,13 +44,13 @@ Search results are also returned with an option to add beer to Favorite Beers.  
 Reset button empties previous search results div as well as instructions about clicking on a beer for more info.
 
 
-Random Beer:
+## **Random Beer:**
 Random beer box has background image of beer bottle.  Text on top of beer bottle is clickable and will use the Random Beer function of the PunkAPI to return the value of a random beer.  Upon return, the text on top of the beer bottle disappears and the info for the random beer appears.  The random beer info area becomes clickable, and can be clicked on to run the Random Beer functions again.
 
 
-Strong Beers History:
+## **Strong Beers History:**
 Strong Beers is made up of two carousels that are running simultaneously.  One shows the images of the beer and the other shows the information about the beer. Values are declared at the top of Javascript.  Each button calls a function that loops through both carousels using if statements and a jQuery .eq to check the index of the currently displayed image and text.  
 
 
-Responsive Design:
+## **Responsive Design:**
 Site is designed mostly with percentages and works on all widths of web use, as well as on mobile.  Elements that needed to remain a certain height due to room for background images or text that eventually appears within the element were assigned concrete pixel values and change with media queries.  ABV and IBU hover functions have a specific functionality for mobile since hover is not available on mobile devices.
