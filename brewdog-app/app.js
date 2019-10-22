@@ -102,7 +102,7 @@ $(() => {
 
     $('#nameButton').on('click', (event) => {
         event.preventDefault();
-
+        $('#search-result').empty()
 
         $('#search-result').css("display", "block")
         //show results of search
@@ -155,7 +155,7 @@ $(() => {
 
     $('#abvButton').on('click', (event) => {
         event.preventDefault();
-
+        $('#search-result').empty()
 
         $('#search-result').css("display", "block")
 
@@ -201,6 +201,7 @@ $(() => {
 
     $('#ibuButton').on('click', (event) => {
         event.preventDefault();
+        $('#search-result').empty()
 
         $('#search-result').css("display", "block")
 
@@ -249,7 +250,8 @@ $(() => {
 
     $('#foodButton').on('click', (event) => {
         event.preventDefault();
-
+        $('#search-result').empty()
+        
         $('#search-result').css("display", "block")
 
         const foodInput = $('#food').val();
