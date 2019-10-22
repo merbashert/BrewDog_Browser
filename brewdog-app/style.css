@@ -113,6 +113,21 @@ section1 {
     text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
 }
 
+.search h5 {
+    font-size: 12px;
+    margin: 1px 5px 1px 10px;
+    color: #DBB27A;
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
+    line-height: 14px;
+    display: none;
+
+}
+
+#mobileHelp {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+}
+
 .parameter {
     display: flex;
     justify-content: space-between;
@@ -239,12 +254,20 @@ h2 {
         font-size: 30px;
     }
 
+
+
     .min, .max {
         width: 23.5%;
     }
 
     #name, #food {
         width: 39%
+    }
+}
+
+@media (min-width: 500px) {
+    #mobileHelp {
+        display: none;
     }
 }
 

@@ -24,9 +24,16 @@ $(() => {
     })
 
     $('.hide').on("click", () => {
-        $('#modal').css("display", "none")
+        $('#modal').slideUp(400)
     })
 
+    $('#abvButton').hover(() => {
+        $('#abvExplanation').toggle();
+    })
+
+    $('#ibuButton').hover(() => {
+        $('#ibuExplanation').toggle();
+    })
 
     $('.next').on('click', () => {
         strongChildren.eq(currentImg).css("display", "none")
@@ -77,7 +84,7 @@ $(() => {
     //adding functionality to previous button
 
     $('.fave-heading').on("click", () => {
-        $('#modal').toggle();
+        $('#modal').slideDown(400)
 
     })
 
