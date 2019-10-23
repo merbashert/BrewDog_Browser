@@ -11,6 +11,7 @@ $(() => {
     let faveBeers = localStorage.getItem('Favorite Beers') ?
     JSON.parse(localStorage.getItem('Favorite Beers')) : []
     //get fave beers from local storage
+    //code modeled after https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
 
 
     localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
@@ -18,8 +19,9 @@ $(() => {
         $('<div>').text("•" + faveBeers[i]).appendTo('#modal').addClass("fave-remember")
     } //create beer favorites list
 
-
-    //////////Buttons///////
+    /////////////////////////////////////////////////////////////////
+    //Buttons//
+    /////////////////////////////////////////////////////////////////
 
     $('.clear').on("click", () => {
         localStorage.clear();
@@ -251,7 +253,7 @@ $(() => {
     $('#foodButton').on('click', (event) => {
         event.preventDefault();
         $('#search-result').empty()
-        
+
         $('#search-result').css("display", "block")
 
         const foodInput = $('#food').val();
@@ -334,6 +336,9 @@ $(() => {
                     })
                 })
             }) //end of random button
+
+
+
 
 
         }) //end of onload
