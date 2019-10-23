@@ -8,6 +8,7 @@ https://merbashert.github.io/brewdog-app/
 - CSS
 - JavaScript
 - jQuery
+- JSON
 
 ## **Resources:**
 
@@ -59,5 +60,3 @@ Site is designed mostly with percentages and works on all widths of web use, as 
 
 ### *Unsolved Issues:*
 I wanted to add the ability to add a beer from the random beer generator to the favorite beer list, but I was worried about breaking the functionality.
-
-Occasionally a beer description longer than the height of the random box is generated.  It happens maybe 1 in every 20 descriptions.  It overflows the box and looks bad, but I didn't want to make the height of the box to compensate for such a rare occurence. 
