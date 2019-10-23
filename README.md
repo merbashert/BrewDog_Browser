@@ -17,7 +17,6 @@ API Data sourced from [PunkAPI](https://punkapi.com/).
 ## **Site Functionality:**
 
 ### *Nav Bar:*
-- Sticky navbar
 - Link to BrewDogs official website
 - Download link for Brew Dogs back catalog/recipe book
 - My Favorite Beers: 
