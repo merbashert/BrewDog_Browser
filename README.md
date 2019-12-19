@@ -1,7 +1,7 @@
 # First Project: BrewDog Browser
 
 ## **Live site:**
-https://merbashert.github.io/brewdog-app/
+https://merbashert.github.io/BrewDog_Browser/
 
 ## **Technologies Used:**
 - HTML
