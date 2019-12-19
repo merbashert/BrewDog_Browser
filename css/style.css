@@ -6,7 +6,7 @@
 
 
 body {
-    background-image: url('./imgs/Background.jpg');
+    background-image: url('/imgs/Background.jpg');
     background-size: auto;
     background-attachment: fixed;
     font-family: 'Special Elite', cursive;
