@@ -7,7 +7,7 @@
 
 body {
     /* background-image: url('imgs/Background.jpg'); */
-    background-image: url('imgs/Background.jpg');
+    background-image: url('../imgs/Background.jpg');
     background-size: auto;
     background-attachment: fixed;
     font-family: 'Special Elite', cursive;
@@ -279,7 +279,7 @@ h2 {
     width: 80%;
     height: 360px;
     margin: 10px auto;
-    background-image: url('imgs/empty-bottle.png');
+    background-image: url('../imgs/empty-bottle.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
