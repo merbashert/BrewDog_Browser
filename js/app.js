@@ -7,7 +7,6 @@ $(() => {
     let highestText = strongText.length - 1
     //add variables for slideshow function
 
-console.log(strongChildren);
     let faveBeers = localStorage.getItem('Favorite Beers') ?
     JSON.parse(localStorage.getItem('Favorite Beers')) : []
     //ternary if statement to check if there's content in local storage, and if so, to turn that data into JSON, and if not to return an empty array
@@ -142,15 +141,15 @@ console.log(strongChildren);
                     }) //show more beer info
 
                     $add.on("click", () => {
-                        faveBeers.push(data[i].name)
-                        console.log(data[i].name);
-                        localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
-                        $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember");
-                        $('#modal').slideDown(400).delay(2000).slideUp(400);
-
-                        //add beer to favorite list
-
-
+                        if(faveBeers.indexOf(data[i].name) == -1) {
+                            faveBeers.push(data[i].name)
+                            localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+                            $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
+                            $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        }
+                        else {
+                            alert("Beer already in favorites list!")
+                        }
                     })
 
                     const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
@@ -194,10 +193,15 @@ console.log(strongChildren);
                     })
 
                     $add.on("click", () => {
-                        faveBeers.push(data[i].name)
-                        localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
-                        $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
-                        $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        if(faveBeers.indexOf(data[i].name) == -1) {
+                            faveBeers.push(data[i].name)
+                            localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+                            $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
+                            $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        }
+                        else {
+                            alert("Beer already in favorites list!")
+                        }
                     })
 
                     const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
@@ -243,10 +247,15 @@ console.log(strongChildren);
                     })
 
                     $add.on("click", () => {
-                        faveBeers.push(data[i].name)
-                        localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
-                        $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
-                        $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        if(faveBeers.indexOf(data[i].name) == -1) {
+                            faveBeers.push(data[i].name)
+                            localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+                            $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
+                            $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        }
+                        else {
+                            alert("Beer already in favorites list!")
+                        }
                     })
 
                     const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
@@ -290,10 +299,15 @@ console.log(strongChildren);
                     })
 
                     $add.on("click", () => {
-                        faveBeers.push(data[i].name)
-                        localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
-                        $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
-                        $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        if(faveBeers.indexOf(data[i].name) == -1) {
+                            faveBeers.push(data[i].name)
+                            localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+                            $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
+                            $('#modal').slideDown(400).delay(2000).slideUp(400);
+                        }
+                        else {
+                            alert("Beer already in favorites list!")
+                        }
                     })
 
                     const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
