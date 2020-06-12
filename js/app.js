@@ -7,9 +7,10 @@ $(() => {
     let highestText = strongText.length - 1
     //add variables for slideshow function
 
-
+console.log(strongChildren);
     let faveBeers = localStorage.getItem('Favorite Beers') ?
     JSON.parse(localStorage.getItem('Favorite Beers')) : []
+    //ternary if statement to check if there's content in local storage, and if so, to turn that data into JSON, and if not to return an empty array
     //get fave beers from local storage
     //code modeled after https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
 
@@ -17,7 +18,9 @@ $(() => {
     localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
     for (let i = 0; i < faveBeers.length; i++) {
         $('<div>').text("•" + faveBeers[i]).appendTo('#modal').addClass("fave-remember")
-    } //create beer favorites list
+    }
+    //Creates an item in local storage called Favorite beers, turns the JSON into strings inside an array, then use a for loop to append divs of each item to the favebeers modal
+    //create beer favorites list
 
     /////////////////////////////////////////////////////////////////
     //Buttons//
@@ -27,6 +30,7 @@ $(() => {
         localStorage.clear();
         $('.fave-remember').remove();
     })
+    //empties out local storage and removes the class
 
     $('.hide').on("click", () => {
         $('#modal').slideUp(400)
@@ -35,6 +39,7 @@ $(() => {
     $('#abvButton').hover(() => {
         $('#abvExplanation').toggle();
     })
+    //changes the visibility of the explanation
 
     $('#ibuButton').hover(() => {
         $('#ibuExplanation').toggle();
@@ -42,10 +47,13 @@ $(() => {
 
     $('.next').on('click', () => {
         strongChildren.eq(currentImg).css("display", "none")
+        //make the current image invisible
         if (currentImg < highestIndex) {
             currentImg++
+            //change the index number to the next image
         } else {
             currentImg = 0
+            //otherwise return to the beginning of the image array
         }
         //loop through images
 
@@ -91,6 +99,7 @@ $(() => {
     $('.fave-heading').on("click", () => {
         $('#modal').slideToggle(400);
     })
+    //show favorite menu
 
     $('#reset').on('click', (event) => {
         $('#search-result').empty().css("display", "none");
@@ -134,9 +143,11 @@ $(() => {
 
                     $add.on("click", () => {
                         faveBeers.push(data[i].name)
+                        console.log(data[i].name);
                         localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
                         $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember");
                         $('#modal').slideDown(400).delay(2000).slideUp(400);
+
                         //add beer to favorite list
 
 
