@@ -28,6 +28,7 @@ $(() => {
     $('.clear').on("click", () => {
         localStorage.clear();
         $('.fave-remember').remove();
+        $('.delete').remove();
     })
     //empties out local storage and removes the class
 
@@ -132,7 +133,6 @@ $(() => {
                     $('#search-result').append($beerInfo)
                     const $name = $('<div>').appendTo($beerInfo).addClass('name').text(data[i].name)
 
-
                     const $beerMoreInfo = $('<div>').appendTo($beerInfo).addClass("more-info")
                     const $add = $('<div>').appendTo($beerMoreInfo).text("+ Add to My Favorite Beers").addClass("add")
 
@@ -145,12 +145,20 @@ $(() => {
                             faveBeers.push(data[i].name)
                             localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
                             $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
+                            $delete = $('<div>').appendTo($div).text("x").addClass('delete');
+                            console.log($delete.parent());
                             $('#modal').slideDown(400).delay(2000).slideUp(400);
+
                         }
                         else {
                             alert("Beer already in favorites list!")
                         }
                     })
+
+
+
+
+
 
                     const $desc = $('<div>').appendTo($beerMoreInfo).addClass('description').text(data[i].description)
                     const $abv = $('<div>').appendTo($beerMoreInfo).addClass('abv').text("ABV: " + data[i].abv)
@@ -322,9 +330,10 @@ $(() => {
         ); $('#food').trigger('reset');
     }); //end of food button functionality
 
-    $('.random').one('click', (event) => {
+    $('.random-box').on('click', (event) => {
         $('h1').remove();
         $('.random').css("display", "block");
+        $('.random').empty();
         //clear "get a random beer" text, add random beer
         const $promise = $.ajax({
             url: "https://api.punkapi.com/v2/beers/random"
@@ -343,7 +352,7 @@ $(() => {
                 $('.random').append(clickForAnother)
                 const $add = $('<div>').appendTo($('.random')).text("+ Add to My Favorite Beers").addClass("add")
 
-                $add.on("click", () => {
+                $add.on("click", (event) => {
                     if(faveBeers.indexOf(data[0].name) == -1) {
                         faveBeers.push(data[0].name)
                         localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
@@ -353,33 +362,17 @@ $(() => {
                     else {
                         alert("Beer already in favorites list!")
                     }
+                    return false;
+                    //return false prevents the random click from happening - it stops the propogation and bubbling
                 })
 
             })
 
-            $('.random').on("click", (event) => {
-                $('.random').empty();
-                const $promise = $.ajax({
-                    url: "https://api.punkapi.com/v2/beers/random"
-                }).then(
-                    (data) => {
-                        const randomBeerName = $('<div>').text("Name: " + data[0].name)
-                        const randomBeerDescription = $('<div>').html("Description: " + data[0].description)
-                        const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
-                        const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
-                        const clickForAnother = $('<div>').text("Click for another random beer!").addClass("click-for-another")
 
-                        $('.random').append(randomBeerName)
-                        $('.random').append(randomBeerDescription)
-                        $('.random').append(randomBeerABV)
-                        $('.random').append(randomBeerIBU)
-                        $('.random').append(clickForAnother)
-                    })
-                })
-            }) //end of random button
+        }) //end of random button
 
 
 
 
 
-        }) //end of onload
+    }) //end of onload
