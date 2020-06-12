@@ -322,7 +322,7 @@ $(() => {
         ); $('#food').trigger('reset');
     }); //end of food button functionality
 
-    $('.random-box').one('click', (event) => {
+    $('.random').one('click', (event) => {
         $('h1').remove();
         $('.random').css("display", "block");
         //clear "get a random beer" text, add random beer
@@ -335,11 +335,26 @@ $(() => {
                 const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
                 const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
                 const clickForAnother = $('<div>').text("Click for another random beer!").addClass("click-for-another")
+
                 $('.random').append(randomBeerName)
                 $('.random').append(randomBeerDescription)
                 $('.random').append(randomBeerABV)
                 $('.random').append(randomBeerIBU)
                 $('.random').append(clickForAnother)
+                const $add = $('<div>').appendTo($('.random')).text("+ Add to My Favorite Beers").addClass("add")
+
+                $add.on("click", () => {
+                    if(faveBeers.indexOf(data[0].name) == -1) {
+                        faveBeers.push(data[0].name)
+                        localStorage.setItem('Favorite Beers', JSON.stringify(faveBeers));
+                        $div = $('<div>').appendTo('#modal').text("•" + faveBeers[faveBeers.length-1]).addClass("fave-remember")
+                        $('#modal').slideDown(400).delay(2000).slideUp(400);
+                    }
+                    else {
+                        alert("Beer already in favorites list!")
+                    }
+                })
+
             })
 
             $('.random').on("click", (event) => {
@@ -353,6 +368,7 @@ $(() => {
                         const randomBeerABV = $('<div>').html("ABV: " + data[0].abv)
                         const randomBeerIBU = $('<div>').html("IBU: " + data[0].ibu)
                         const clickForAnother = $('<div>').text("Click for another random beer!").addClass("click-for-another")
+
                         $('.random').append(randomBeerName)
                         $('.random').append(randomBeerDescription)
                         $('.random').append(randomBeerABV)
