@@ -331,7 +331,6 @@ h1 {
 .strong-images {
     display: flex;
     justify-content: space-around;
-    /* background-color: rgb(144,93,61, .6); */
     border-radius: 3px;
 }
 
@@ -346,7 +345,7 @@ h1 {
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     height: 20%;
     font-size: 40px;
     margin-top: 10px;
@@ -360,6 +359,12 @@ h1 {
     font-size: 45px;
 }
 
+.strong-container {
+    width: 100%;
+    display: flex;
+    margin: auto;
+
+}
 
 .strong-text {
     width: 90%;
@@ -367,9 +372,14 @@ h1 {
     padding: 0px 20px;
     font-family: 'Fjalla One', sans-serif;
     letter-spacing: .3px;
-    color: black;;
+    color: black;
     margin-left: 5px;
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    text-align: center;
 }
 
 .strong-fact {
@@ -389,14 +399,22 @@ h4 {
     width: 80%;
 }
 
+.history-section {
+    display: flex;
+    justify-content: center;
+}
+
+
 @media (min-width: 700px) {
     .strong-container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        height: 370px;
     }
+
     .buttons {
-        margin-left: 20px;
+        justify-content: flex-start;
     }
 
     .strong-images img {
@@ -404,7 +422,9 @@ h4 {
     }
 
     .strong-text {
-        width: 60%
+        width: 60%;
+        height: 95%;
+        text-align: left;
     }
 
     .history {
