@@ -1,12 +1,4 @@
-:root {
-    --dark-brown: #7C4236;
-    --light-brown: #DBB27A;
-    --tan: #C19A6B;
-}
-
-
 body {
-    background-image: url('../imgs/Background.jpg');
     background-size: auto;
     background-attachment: fixed;
     font-family: 'Special Elite', cursive;
@@ -16,7 +8,7 @@ body {
 /* Nav Bar */
 
 #navbar {
-    background-color: var(--dark-brown);
+    background-color: white;
     height: 78px;
     display: flex;
     justify-content: space-around;
@@ -29,7 +21,7 @@ body {
 
 #navbar a, .fave-heading {
     text-decoration: none;
-    color: var(--light-brown);
+    color: black;;
     text-align: center;
     font-size: 14px;
     line-height: 20px;
@@ -51,7 +43,7 @@ body {
 
 #modal button {
     background-color: rgb(255,255,240, .8);
-    border: 1px solid var(--dark-brown);
+    border: 1px solid white;
     font-family: 'Oswald', sans-serif;
     margin: 5px;
     border-radius: 3px;
@@ -101,23 +93,21 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(144,93,61, .6);
+    /* background-color: rgb(144,93,61, .6); */
     border-radius: 3px;
     width: 100%;
 }
 
 .search h3 {
     margin: 8px;
-    color: var(--light-brown);
+    color: black;
     font-size: 20px;
-    text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .search h5 {
     font-size: 12px;
     margin: 1px 5px 1px 10px;
-    color: var(--light-brown);
-    text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
+    color: black;
     line-height: 14px;
     display: none;
 }
@@ -136,10 +126,8 @@ section {
 .parameter button {
     width: 100px;
     height: 40px;
-    background-color: var(--dark-brown);
-    border: 2px outset var(--dark-brown);
-    color: var(--light-brown);
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    color: black;
     font-size: 14px;
     line-height: 15px;
     font-family: 'Special Elite', cursive;
@@ -148,7 +136,6 @@ section {
 
 input {
     font-size: 14px;
-    background-color: #ECDECA;
 }
 
 .minmax {
@@ -159,27 +146,26 @@ input {
 .min, .max {
     width: 19.5%;
     margin-left: .45em;
-    color: var(--dark-brown);
     font-family: 'Oswald', sans-serif;
     padding-left: 2px;
 }
 
 #name, #food {
     width: 31%;
-    color: var(--dark-brown);
+    color: black;
     font-family: 'Oswald', sans-serif;
     padding-left: 5px;
 }
 
 ::placeholder {
-    color: var(--dark-brown);
+    color: white;
 }
 
 .click-beer {
     margin-left: 5px;
     display: none;
     font-family: 'Fjalla One', sans-serif;
-    color: var(--tan);
+    color: black;;
 }
 
 .reset-box {
@@ -190,28 +176,25 @@ input {
 #reset {
     width: 150px;
     height: 35px;
-    background-color: var(--dark-brown);
-    border: 2px outset var(--dark-brown);
+    background-color: white;
     font-family: 'Special Elite', cursive;
-    color: var(--light-brown);
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    color: black;
     margin: 20px 0px;
     font-size: 18px;
     border-radius: 3px;
 }
 
 #search-result {
-    border: 1px solid var(--dark-brown);
+    border: 1px solid white;
     display: none;
     width: 100%;
 }
 
 .beer-info {
-    border-bottom: 1px solid var(--dark-brown);
+    border-bottom: 1px solid white;
     margin: 5px;
     cursor: pointer;
-    color: var(--tan);
-    text-shadow: 1px 1px black;
+    color: black;;
 
 }
 
@@ -222,14 +205,12 @@ input {
 .more-info {
     display: none;
     font-family: 'Oswald', sans-serif;
-    color: #3B2824;
-    text-shadow: none;
+    background-color: rgb(229,228,226,.5);
 }
 
 .add {
     font-size: 14px;
-    color: #ECDECA;
-    text-shadow: 1px 1px rgb(0,0,0,.5);
+    color: black;
     letter-spacing: .03em;
 }
 
@@ -285,14 +266,13 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(144,93,61, .6);
+    /* background-color: rgb(144,93,61, .6); */
     border-radius: 3px;
 }
 
 .random {
     padding: 0px 5px;
-    color: var(--tan);
-    text-shadow: 1px 1px #4E342E;
+    color: black;;
     text-align: left;
     background-color: rgb(110,54,45,.6);
     font-family: 'oswald', sans-serif;
@@ -351,7 +331,7 @@ h1 {
 .strong-images {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(144,93,61, .6);
+    /* background-color: rgb(144,93,61, .6); */
     border-radius: 3px;
 }
 
@@ -376,8 +356,7 @@ h1 {
 
 .strong-button {
     margin: 6px;
-    color: var(--tan);
-    text-shadow: 2px 2px #4E342E;
+    color: black;;
     font-size: 45px;
 }
 
@@ -388,9 +367,7 @@ h1 {
     padding: 0px 20px;
     font-family: 'Fjalla One', sans-serif;
     letter-spacing: .3px;
-    background-color: rgb(110,54,45,.6);
-    color: var(--tan);
-    text-shadow: 1px 2px #4E342E;
+    color: black;;
     margin-left: 5px;
     border-radius: 3px;
 }
@@ -441,13 +418,13 @@ footer {
     font-size: 12px;
     font-family: 'Oswald', sans-serif;
     margin-top: 20px;
-    color: var(--tan);
+    color: black;;
 }
 
 footer a:link {
-    color: var(--tan)
+    color: black;
 }
 
 footer a:visited {
-    color: var(--tan)
+    color: black;
 }
